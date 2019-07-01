@@ -30,7 +30,7 @@ window.onload = function(event) {
 
 		// accounts for white space
 		if (!seeker.length || !destroyer.length) {
-			display("Enter values", "???", "???");
+			display("???", "???", "Enter values");
 		} else {
 			
 			let result = [];
