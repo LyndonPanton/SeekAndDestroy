@@ -4,7 +4,7 @@ window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 	function execute(seek, destroy) {
-		// freecodecamp environment solution
+		// freecodecamp environment version
 		// let args = Array.prototype.slice.call(arguments);
 		// let seek = args[0];
 		// let destroy = args.slice(1);
@@ -17,6 +17,24 @@ window.onload = function(event) {
 		// }
 
 		// return newArray;
+
+		// web version
+		// accounts for white space
+		if (!seek || !destroy) {
+			return "Enter values";
+		} else {
+			let seeker = seek.split(" ").join("").split("");
+			let destroyer = destroy.split(" ").join("").split("");
+			let result = [];
+
+			for (let i = 0; i < seeker.length; i++) {
+				if (destroyer.indexOf(seeker[i]) === -1) {
+					result.push(seeker[i]);
+				}
+			}
+		}
+
+		return result;
 	}
 
 	function toggle(chevron) {
