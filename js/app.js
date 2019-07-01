@@ -25,8 +25,8 @@ window.onload = function(event) {
 		// return newArray;
 
 		// web version
-		let seeker = seek.split(" ").join("").split("");
-		let destroyer = destroy.split(" ").join("").split("");
+		let seeker = seek.split(" ");
+		let destroyer = destroy.split(" ");
 
 		// accounts for white space
 		if (!seeker.length || !destroyer.length) {
