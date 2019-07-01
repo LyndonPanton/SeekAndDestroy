@@ -25,12 +25,14 @@ window.onload = function(event) {
 		// return newArray;
 
 		// web version
+		let seeker = seek.split(" ").join("").split("");
+		let destroyer = destroy.split(" ").join("").split("");
+
 		// accounts for white space
-		if (!seek || !destroy) {
+		if (!seeker.length || !destroyer.length) {
 			display("Enter values", "???", "???");
 		} else {
-			let seeker = seek.split(" ").join("").split("");
-			let destroyer = destroy.split(" ").join("").split("");
+			
 			let result = [];
 
 			for (let i = 0; i < seeker.length; i++) {
