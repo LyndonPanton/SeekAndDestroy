@@ -41,7 +41,7 @@ window.onload = function(event) {
 				}
 			}
 
-			display(seeker, destroyer, result);
+			display(seeker.join(", "), destroyer.join(", "), result.join(", "));
 		}
 
 		
