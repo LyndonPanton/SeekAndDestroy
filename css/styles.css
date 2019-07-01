@@ -1,2 +1,28 @@
 @charset "UTF-8";
 /* bright pastels (@scheme color) */
+
+/* GENERAL */
+body, html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background-color: #F9FFCB;
+	text-align: center;
+	letter-spacing: 1px;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+	color: black;
+}
+
+
+
+/* HEADER */
+
+
+
+/* MAIN */
+
+
+
+/* FOOTER */
