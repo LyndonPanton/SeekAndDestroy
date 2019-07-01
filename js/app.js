@@ -4,9 +4,30 @@ window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 	function display(seek, destroy, result) {
-		document.getElementById("seek-values").textContent = seek;
-		document.getElementById("destroy-values").textContent = destroy;
-		document.getElementById("result-values").textContent = result;
+		let seekFilter = [];
+		let destroyFilter = [];
+		let resultFilter = [];
+
+		seek.forEach(function(value, index) {
+			if (value) {
+				seekFilter.push(value);
+			}
+		});
+
+		destroy.forEach(function(value, index) {
+			if (value) {
+				destroyFilter.push(value);
+			}
+		});
+
+		result.forEach(function(value, index) {
+			if (value) {
+				resultFilter.push(value);
+			}
+		});
+		document.getElementById("seek-values").textContent = seekFilter.join(", ");
+		document.getElementById("destroy-values").textContent = destroyFilter.join(", ");
+		document.getElementById("result-values").textContent = resultFilter.join(", ");
 	}
 
 	function execute(seek, destroy) {
@@ -41,7 +62,7 @@ window.onload = function(event) {
 				}
 			}
 
-			display(seeker.join(", "), destroyer.join(", "), result.join(", "));
+			display(seeker, destroyer, result);
 		}
 
 		
