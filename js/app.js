@@ -3,6 +3,10 @@
 window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
+	function display(seek, destroy, result) {
+
+	}
+
 	function execute(seek, destroy) {
 		// freecodecamp environment version
 		// let args = Array.prototype.slice.call(arguments);
@@ -21,7 +25,7 @@ window.onload = function(event) {
 		// web version
 		// accounts for white space
 		if (!seek || !destroy) {
-			return "Enter values";
+			return display("Enter values", "???", "???");
 		} else {
 			let seeker = seek.split(" ").join("").split("");
 			let destroyer = destroy.split(" ").join("").split("");
@@ -32,9 +36,11 @@ window.onload = function(event) {
 					result.push(seeker[i]);
 				}
 			}
+
+			return display(result);
 		}
 
-		return result;
+		
 	}
 
 	function toggle(chevron) {
