@@ -3,6 +3,22 @@
 window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
+	function execute(seek, destroy) {
+		// freecodecamp environment solution
+		// let args = Array.prototype.slice.call(arguments);
+		// let seek = args[0];
+		// let destroy = args.slice(1);
+		// let newArray = [];
+		  
+		// for (let i = 0; i < seek.length; i++) {
+		//   if (destroy.indexOf(seek[i]) === -1) {
+		//     newArray.push(seek[i]);
+		//   }
+		// }
+
+		// return newArray;
+	}
+
 	function toggle(chevron) {
 		let task = document.getElementById("task");
 
@@ -35,5 +51,7 @@ window.onload = function(event) {
 	let form = document.getElementById("form");
 	form.addEventListener("submit", function(event) {
 		event.preventDefault();
+
+		execute(this.children[0].value, this.children[1].value);
 	});
 };
