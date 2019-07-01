@@ -4,7 +4,9 @@ window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 	function display(seek, destroy, result) {
-
+		document.getElementById("seek-values").textContent = seek;
+		document.getElementById("destroy-values").textContent = destroy;
+		document.getElementById("result-values").textContent = result;
 	}
 
 	function execute(seek, destroy) {
@@ -25,7 +27,7 @@ window.onload = function(event) {
 		// web version
 		// accounts for white space
 		if (!seek || !destroy) {
-			return display("Enter values", "???", "???");
+			display("Enter values", "???", "???");
 		} else {
 			let seeker = seek.split(" ").join("").split("");
 			let destroyer = destroy.split(" ").join("").split("");
@@ -37,7 +39,7 @@ window.onload = function(event) {
 				}
 			}
 
-			return display(result);
+			display(seeker, destroyer, result);
 		}
 
 		
