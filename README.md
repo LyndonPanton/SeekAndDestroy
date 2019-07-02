@@ -19,6 +19,9 @@
 ## Errors
 > 1. N/A
 
+## Extra Information
+> 1. This was done for one of the activites in freecodecamp's Intermediate Algorithm Scripting section
+
 ## Preview
 ![Screenshot 1](./img/screenshot1.png)
 ![Screenshot 2](./img/screenshot2.png)
